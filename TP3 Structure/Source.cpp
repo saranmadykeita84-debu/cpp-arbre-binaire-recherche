@@ -1,9 +1,9 @@
 //===================================================================================||
-// Nom du Programme             : Structure de données                               || 
-// Auteurs                      : Saran Mady Keita et Kadiatou Lamarana Bah          ||
-// Date de création             : 01 Decembre 2024                                    ||
+// Nom du Programme             : Structure de donnÃ©es                               || 
+// Auteurs                      : Saran Mady Keita                                   ||
+// Date de crÃ©ation             : 01 Decembre 2024                                   ||
 // Date de modification         : 04 Decembre 2024                                   ||
-// But de programme             : Ce programme a pour but d'implémenter et           ||
+// But de programme             : Ce programme a pour but d'implÃ©menter et           ||
 //                              : manipuler des arbres binaires de recherche         ||
 //                              : avec des classes en C++.                           ||
 //===================================================================================||
@@ -11,7 +11,7 @@
 #include <iostream>
 #include "ABR.h"
 #include <fstream>
-#include <sstream> // Pour utiliser stringstream pour gérer la lecture du fichier
+#include <sstream> // Pour utiliser stringstream pour gÃ©rer la lecture du fichier
 
 using namespace std;
 
@@ -22,8 +22,7 @@ void afficherIntroduction()
     cout << "||  Date de creation:         01/12/2024          ||" << endl;
     cout << "||  Date de Modification:     04/12/2024          ||" << endl;
     cout << "||  Travail realiser par:                         ||" << endl;
-    cout << "||  Keita Saran Mady        -> KEIS02060000       ||" << endl;
-    cout << "||  Bah Kadiatou Lamarana   -> BAHK30629900       ||" << endl;
+    cout << "||  Keita Saran Mady                              ||" << endl;
     cout << "||  Bonnus prise en compte                        ||" << endl;
     cout << "====================================================" << endl;
     cout << endl;
@@ -47,13 +46,13 @@ int main()
     // Lire chaque ligne du fichier
     while (getline(fichier, ligne))
     {
-        // Nettoyage des espaces superflus avant et après la ligne
-        ligne = ligne.substr(0, ligne.find_last_not_of(" \t\r\n") + 1); // Enlève les espaces et retours à la ligne
+        // Nettoyage des espaces superflus avant et aprÃ¨s la ligne
+        ligne = ligne.substr(0, ligne.find_last_not_of(" \t\r\n") + 1); // EnlÃ¨ve les espaces et retours Ã  la ligne
 
         // Si la ligne est vide, on l'ignore
         if (ligne.empty()) continue;
 
-        // Créer un stringstream pour traiter la ligne
+        // CrÃ©er un stringstream pour traiter la ligne
         stringstream ss(ligne);
         string commande;
         ss >> commande;
@@ -66,7 +65,7 @@ int main()
             }
             else
             {
-                cout << "Commande incorrecte ou manque de valeur après 'I'." << endl;
+                cout << "Commande incorrecte ou manque de valeur aprÃ¨s 'I'." << endl;
             }
         }
         else if (commande == "S")
@@ -80,7 +79,7 @@ int main()
             }
             else
             {
-                cout << "Commande incorrecte ou manque de valeur après 'S'." << endl;
+                cout << "Commande incorrecte ou manque de valeur aprÃ¨s 'S'." << endl;
             }
         }
         else if (commande == "A")
@@ -111,7 +110,7 @@ int main()
             }
             else
             {
-                cout << "Commande incorrecte ou manque de valeur après 'G'." << endl;
+                cout << "Commande incorrecte ou manque de valeur aprÃ¨s 'G'." << endl;
             }
         }
         else if (commande == "T")
@@ -126,7 +125,7 @@ int main()
         }
     }
 
-    fichier.close(); // Fermer le fichier après avoir fini
+    fichier.close(); // Fermer le fichier aprÃ¨s avoir fini
 
     return 0;
 }
